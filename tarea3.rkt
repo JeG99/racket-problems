@@ -1,9 +1,9 @@
 #lang racket
 
 ; P1
-;Implementar la funciónrecursivaprimo?que determine si el valor del argumento dado como un número 
-;natural es un número primo. Un número primo es un número natural que solo tiene dos factores que son 
-;el número mismo y el uno. Los números 0 y 1 no se consideran primos. 
+; Implementar la función recursiva primo? que determine si el valor del argumento dado como un número 
+; natural es un número primo. Un número primo es un número natural que solo tiene dos factores que son 
+; el número mismo y el uno. Los números 0 y 1 no se consideran primos. 
 
 (define (primo? n)
   (define (f n c)
@@ -23,8 +23,8 @@
 (primo? 17)
 
 ; P2
-;Implementar la funciónrecursiva sumdparque regrese la suma de los dígitos pares que conforman a un 
-;número entero no negativo que se le pasa como argumento.
+; Implementar la función recursiva sumdpar que regrese la suma de los dígitos pares que conforman a un 
+; número entero no negativo que se le pasa como argumento.
 
 (define (sumdpar n)
   (define (f n c)
@@ -43,8 +43,8 @@
 (sumdpar 174)
 
 ; P5
-;Implementar la función recursiva bitor que calcule el orlógico entre bits dados  como elementos  de 2 
-;listas dadas como sus argumentos. Asumir que las dos  listas son del mismo tamaño.
+; Implementar la función recursiva bitor que calcule el or lógico entre bits dados  como elementos  de 
+; 2 listas dadas como sus argumentos. Asumir que las dos  listas son del mismo tamaño.
 
 (define (bitor l1 l2)
   (cond
