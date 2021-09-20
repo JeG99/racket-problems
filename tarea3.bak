@@ -1,0 +1,35 @@
+#lang racket
+
+; P1
+;Implementar la funciónrecursivaprimo?que determine si el valor del argumento dado como un número 
+;natural es un número primo. Un número primo es un número natural que solo tiene dos factores que son 
+;el número mismo y el uno. Los números 0 y 1 no se consideran primos. 
+
+(define (sumdpar n)
+  (define (f n c)
+    (cond [(equal? n 1) (print c)]
+          [(and (< n 10) (even? n)) (print (+ c n))]
+          [(even? (mod n 10)) (f (truncate (/ n 10))(+ c (mod n 10)))]
+          [else (f (truncate (/ n 10)) c)]
+    )
+  )
+  ;in
+  (f n 0)
+)
+
+(sumdpar 0)
+(sumdpar 8032)
+(sumdpar 174)
+
+(define (bitor l1 l2)
+  (cond
+    [(and (null? l1) (null? l2)) '()] 
+    [(equal? (+ (car l1) (car l2)) 0) (cons 0 (bitor (cdr l1) (cdr l2)))]
+    [(> (+ (car l1) (car l2)) 0) (cons 1 (bitor (cdr l1) (cdr l2)))]
+  )
+)
+
+(bitor '() '())
+(bitor '(1 0 1) '(0 1 1))
+(bitor '(1 0 1 0) '(1 0 1 0))
+
